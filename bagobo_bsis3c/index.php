@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="login-box">
+        <h1> company Login</h1>
+        <p>Welcome Back, user!</p>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <div class="show">
+            <input type="checkbox" onclick="showPassword()">
+            <label>Show Password</label>
+        </div>
+
+        <button onclick="login()">LOGIN</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,103 @@
+DDL AND DML COMMAND
+
+CREATE DATABASE bsis3c;
+
+CCREATE TABLE Department (
+Departmentid INT PRIMARY KEY,
+Departmentname VARCHAR(50)
+);
+
+
+CREATE TABLE position (
+positionid INT PRIMARY KEY,
+positiontitle VARCHAR(50)
+);
+
+CREATE TABLE salary (
+salaryid INT PRIMARY KEY,
+employeeid VARCHAR(50),bsis3c
+salaryamount VARCHAR(50),
+dateimplemented DATE 
+
+CREATE TABLE employee (
+employeeid INT PRIMARY KEY,
+lastname VARCHAR(50),
+firstname VARCHAR(50),
+departmentid VARCHAR(50),
+positionid VARCHAR(50) 
+);
+
+CREATE TABLE departmentlocation (
+locationid INT PRIMARY KEY,
+departmentid VARCHAR(50),
+officelocation VARCHAR(50),
+city VARCHAR(50)
+);
+
+INSERT INTO department(departmentid, departmentname)
+VALUES ("0001","humanresource");
+
+INSERT INTO department(departmentid, departmentname)
+VALUES ("0002","salesdepartment");
+
+INSERT INTO department(departmentid, departmentname)
+VALUES ("0003","marketingdepartment");
+
+INSERT INTO departmentlocation(locationid, departmentid, officelocation, city)
+VALUES ("220","0001","hr main office","cagayan");
+
+INSERT INTO departmentlocation(locationid, departmentid, officelocation, city)
+VALUES ("221","0002","salesoffice","manila");
+
+INSERT INTO departmentlocation(locationid, departmentid, officelocation, city)
+VALUES ("222","0003","marketingdepartment","quezoncity");
+
+INSERT INTO employee(employeeid, lastname, firstname, departmentid, positionid)
+VALUES ("117","lim","xander","0001","112");
+
+INSERT INTO employee(employeeid, lastname, firstname, departmentid, positionid)
+VALUES ("118","anderson","liana","0002","113");
+
+IINSERT INTO employee(employeeid, lastname, firstname, departmentid, positionid)
+VALUES ("119","cruz","harold","0003","114");
+
+INSERT INTO position (positionid, positiontitle)
+VALUES ('112', 'hr');
+
+INSERT INTO position (positionid, positiontitle)
+VALUES ('113', 'salesassociate');
+
+INSERT INTO position (positionid, positiontitle)
+VALUES ('114', 'marketingofficer');
+
+INSERT INTO salary (salaryid, employeeid, salaryamount, dateimplemented)
+VALUES ('0001', '117', '35,000','2026-07-02');
+
+INSERT INTO salary (salaryid, employeeid, salaryamount, dateimplemented)
+VALUES ('0002', '118', '20,000','2026-07-02');
+
+INSERT INTO salary (salaryid, employeeid, salaryamount, dateimplemented)
+VALUES ('0003', '119', '25,000','2026-07-02');
+
+ALTER TABLE employee
+ADD username VARCHAR (50)
+
+UPDATE department SET departmentid = '1'
+WHERE departmentid = 1;
+
+UPDATE departmentlocation SET locationid = '220'
+WHERE locationid = 220;
+
+ALTER TABLE employee
+ADD PASSWORD VARCHAR(50);
+
+UPDATE employee SET username = 'leigh'
+WHERE employeeid = '117';
+
+UPDATE employee
+SET employee password = '041005'
+WHERE employeeid = '117';
+
+UPDATE employee SET PASSWORD ='102224'
+WHERE employeeid = '117';
+
